@@ -1,0 +1,39 @@
+{% extends "diary/base.html" %}
+{% load static %}
+{% block body %}
+			
+
+
+		<div id="fh5co-main">
+			<aside id="fh5co-hero" class="js-fullheight">
+				<div class="flexslider js-fullheight">
+					<ul class="slides">
+				   	<li style="background-image: url('{% static 'mindnote/img/img_bg_1.jpg' %}');">
+				   		<div class="overlay"></div>
+				   		<div class="container-fluid">
+				   			<div class="row">
+					   			<div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
+					   				<div class="slider-text-inner">
+					   					<h1> <strong>Mindnote : Express Yourself For Healthy Mind</strong> </h1>
+					   					
+											<p><a class="btn btn-primary btn-demo popup-vimeo" href="{% url "blog" %}"> <i class="icon-monitor"></i> My Diary</a> <a class="btn btn-primary btn-learn" href="{% url "diary" %}">Daily Dairy<i class="icon-arrow-right3"></i></a></p>
+					   				</div>
+					   			</div>
+					   		</div>
+				   		</div>
+				   	</li>
+				   	
+				   	
+				  	</ul>
+			  	</div>
+			</aside>
+			
+			
+			
+			
+		</div>
+	</div>
+
+	{% endblock %}
+
+	

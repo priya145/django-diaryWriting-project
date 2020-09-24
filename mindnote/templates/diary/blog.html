@@ -1,0 +1,80 @@
+{% extends "diary/base.html" %}
+{% load static %}
+{% block body %}
+
+
+		<div id="fh5co-main"  >
+			<div class="fh5co-narrow-content">
+        
+				<h1 ><strong>My Daily Diary Feeds :</strong></h1>
+        
+			    <!--{% for entry in Dailyfeeds %}
+				    <div class="row row-bottom-padded-md">
+					    <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+					        <div class="blog-entry">
+							
+							<div class="desc">
+								<h3><a href="#"><strong>{{ entry.title}}</strong></a></h3>
+								
+								<p><strong>{{ entry.created_at}}</strong></p>
+                                <br> {{ entry.blog|safe }}
+								<a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>
+							</div>
+						</div>
+					</div>
+				{% endfor %}-->
+					
+					<!--{% for entry in Dailyfeeds %}
+                <article class="media">
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>{{ entry.created_at}}</strong>
+                                <br> {{ entry.blog }}
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            {% endfor %}-->
+
+ <!--<div class="row">
+ 	{% for entry in Dailyfeeds %}
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">{{ entry.title}}</h4>
+        <h5 class="card-title">{{ entry.created_at}}</h5>
+        <p class="card-text">{{ entry.blog|safe }}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>-->
+
+
+
+{% for entry in Dailyfeeds %}
+        <article class="media content-section" id=piyu>
+            <div class="media-body" >
+            <div class="article-metadata">
+              <h4><a class="article-title" href="#"><strong>{{ entry.title}}</strong></a></h4>
+              
+              
+            </div>
+            <strong>{{ entry.created_at}}</strong>
+            <p class="article-content">{{ entry.blog|safe|truncatewords:"40" }}</p>
+            <a href="{{ entry.slug }}">read more</a>
+            
+          </div>
+      </article>
+      <br>
+
+{% endfor %}
+</div>
+			</div>
+		
+			
+		
+
+	{% endblock %}

@@ -1,0 +1,130 @@
+{% extends "diary/base.html" %}
+{% load static %}
+{% block body %}
+
+
+
+		<div id="fh5co-main">
+
+
+			
+
+			<div class="fh5co-narrow-content">
+					<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Motivational Books</h2>
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bag-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M8 1a2.5 2.5 0 0 0-2.5 2.5V4h5v-.5A2.5 2.5 0 0 0 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>
+</svg>
+					<div class="row">
+						{% for book in Books %}
+						<div class="col-md-6">
+							<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+								<div class="card mb-3" style="max-width: 540px;">
+  									<div class="row no-gutters">
+    									<div class="col-md-4 ">
+      										<img src="{% get_media_prefix %}{{ book.img }}" class="card-img" >
+    									</div>
+    								<div class="col-md-8">
+      									<div class="card-body">
+        									<h5 class="card-title"><strong>{{ book.name }}</strong></h5>
+                          <h5 class="card-title">- {{ book.author }}</h5>
+        									<p class="card-text">{{ book.description|safe|truncatewords:"20" }}</p>
+                          <h5 class="card-title"><strong>Rs. {{ book.price }}/-</strong></h5>
+        									<p class="card-text"><small class="text-muted">published on - {{ book.published_date }}</small></p>
+        									<a href="#">Buy Now</a>  <br>
+                          <a href="#">Add to Cart</a>
+      									</div>
+   	 								</div>
+  								</div>
+							</div>
+
+
+							</div>
+						</div>
+						{% endfor %}
+
+						<!--<div class="col-md-6">
+							<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+								<div class="card mb-3" >
+  									<div class="row no-gutters">
+    									<div class="col-md-4">
+      										<img src="{% static 'mindnote/img/713rQq1bF6L._AC_UY327_FMwebp_QL65_.webp' %}" class="card-img" alt="...">
+    									</div>
+    								<div class="col-md-8">
+      									<div class="card-body">
+        									<h5 class="card-title">Think and Grow Rich</h5>
+        									<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        									<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        									<a href="#" class="btn btn-primary">Button</a>
+      									</div>
+   	 								</div>
+  								</div>
+							</div>
+
+
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+								<div class="card mb-3" style="max-width: 540px;">
+  									<div class="row no-gutters">
+    									<div class="col-md-4">
+      										<img src="{% static 'mindnote/img/81gTwYAhU7L._AC_UY327_FMwebp_QL65_.webp' %}" class="card-img" alt="...">
+    									</div>
+    								<div class="col-md-8">
+      									<div class="card-body">
+        									<h5 class="card-title">The Power of your Subconscious Mind</h5>
+        									<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        									<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        									<a href="#" class="btn btn-primary">Button</a>
+      									</div>
+   	 								</div>
+  								</div>
+							</div>
+
+
+							</div>
+						</div>
+
+
+
+
+
+
+						
+
+						
+
+						<div class="col-md-6">
+							<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+								<div class="card mb-3" style="max-width: 540px;">
+  									<div class="row no-gutters">
+    									<div class="col-md-4">
+      										<img src="{% static 'mindnote/img/81AEdFBqDjL._AC_UY327_FMwebp_QL65_.webp' %}" class="card-img" alt="...">
+    									</div>
+    								<div class="col-md-8">
+      									<div class="card-body">
+        									<h5 class="card-title">How to Stop Worrying and Start Living</h5>
+        									<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        									<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        									<a href="#" class="btn btn-primary">Button</a>
+      									</div>
+   	 								</div>
+  								</div>
+							</div>
+
+
+							</div>
+						</div>
+
+
+						
+						
+					</div>-->
+				</div>
+		
+			
+		</div>
+	</div>
+
+	{% endblock %}
